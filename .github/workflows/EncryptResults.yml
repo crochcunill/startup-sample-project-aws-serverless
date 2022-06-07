@@ -8,7 +8,7 @@ env:
       BASEURL:   ${{ secrets.BASEURL }} 
 
 on:
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
