@@ -26,4 +26,6 @@ jobs:
 
       - name: Echo de gpg version
         run: |
+          echo "******"
           echo gpg -version
+          echo "******"
