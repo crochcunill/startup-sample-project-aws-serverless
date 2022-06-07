@@ -28,6 +28,8 @@ jobs:
           zip -r readme.zip README.md
       - name: Echo de gpg version
         run: |
+          GPG_TTY=$(tty)
+          export GPG_TTY
           eval $(gpg-agent --daemon)
           echo 12345678
           gpg -c --passphrase  "12345678"   -o encrypt.gpg README.md
