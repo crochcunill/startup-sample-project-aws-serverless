@@ -2,10 +2,13 @@
 
 name: Run Encryption routine of test results
 
+env:
+      LICENSE_PLATE: ${{ secrets.MY_LICENSE_PLATE }} 
+      
 # Controls when the workflow will run
 on:
-
-  workflow_dispatch:
+    workflow_dispatch:
+    
 
 jobs:
   # This workflow contains a single job called "build"
