@@ -4,15 +4,14 @@
 name: Run Encryption routine of test results
 
 env:
-  LICENSE_PLATE: ${{ secrets.MY_LICENSE_PLATE }} 
-  BASEURL:   ${{ secrets.BASEURL }} 
+      LICENSE_PLATE: ${{ secrets.MY_LICENSE_PLATE }} 
+      BASEURL:   ${{ secrets.BASEURL }} 
       
 on:
-  workflow_dispatch:
+    workflow_dispatch:
     
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
