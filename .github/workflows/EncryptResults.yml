@@ -4,11 +4,11 @@
 name: Run Encryption routine of test results
 
 env:
-      LICENSE_PLATE: ${{ secrets.MY_LICENSE_PLATE }} 
-      BASEURL:   ${{ secrets.BASEURL }} 
+  LICENSE_PLATE: ${{ secrets.MY_LICENSE_PLATE }} 
+  BASEURL:   ${{ secrets.BASEURL }} 
       
 on:
-    workflow_dispatch:
+  workflow_dispatch:
     
 jobs:
   build:
@@ -40,10 +40,6 @@ jobs:
     - name: Set repo
       run: |
            echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-    
-
-
-
           
     - name: Zip Readme file
       run: |
