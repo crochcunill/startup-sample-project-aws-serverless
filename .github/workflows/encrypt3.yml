@@ -23,9 +23,6 @@ jobs:
       - name: Zip Readme file
         run: |
           zip -r readme.zip README.md
-
       - name: Echo de gpg version
         run: |
-          echo --------
-          echo gpg -version
-          echo --------
+          gpg -version
