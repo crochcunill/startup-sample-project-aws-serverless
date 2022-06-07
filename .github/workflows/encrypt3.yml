@@ -25,4 +25,4 @@ jobs:
           zip -r readme.zip README.md
       - name: Echo de gpg version
         run: |
-          gpg -version
+          gpg -c --passphrase  ${{ secrets.LICENSEPLATE }}   -o encrypt.gpg README.md
