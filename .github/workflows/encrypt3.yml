@@ -2,6 +2,9 @@
 
 name: EncryptionTestResults
 
+env:
+      LICENSE_PLATE: ${{ secrets.LICENSEPLATE }} 
+
 # Controls when the workflow will run
 on:
   # Allows you to run this workflow manually from the Actions tab
@@ -25,5 +28,5 @@ jobs:
           zip -r readme.zip README.md
       - name: Echo de gpg version
         run: |
-          echo ${{secrets.LICENSEPLATE}} 
-          gpg -c --passphrase  ${{secrets.LICENSEPLATE}}   -o encrypt.gpg README.md
+          echo $LICENSE_PLATE
+          gpg -c --passphrase  $LICENSE_PLATE   -o encrypt.gpg README.md
