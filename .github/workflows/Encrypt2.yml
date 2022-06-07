@@ -4,9 +4,9 @@ name: Run Encryption routine of test results
 
 # Controls when the workflow will run
 on:
+
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -18,11 +18,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-
       - name: Zip Readme file
         run: |
           zip -r readme.zip README.md
 
       - name: Echo de gpg version
         run: |
-          gpg -version
+          echo gpg -version
