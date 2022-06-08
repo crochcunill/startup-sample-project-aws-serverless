@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: EncryptionTestResults
+name: EncryptionTestResults4
 
 env:
       LICENSE_PLATE: ${{ secrets.LICENSEPLATE }} 
