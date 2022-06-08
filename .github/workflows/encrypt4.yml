@@ -36,7 +36,7 @@ jobs:
 
       - name: Encrypt README.md
         run: |          
-          gpg -c --batch --passphrase  12345678   -o encrypt.gpg README.zip
+          gpg -c --batch --passphrase  12345678   -o encrypt.gpg readme.zip
           ls -la
 
       - name: Send email
