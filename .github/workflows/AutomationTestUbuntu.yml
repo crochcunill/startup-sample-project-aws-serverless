@@ -4,7 +4,7 @@
 name: Run Automated test Ubuntu
 
 env:
-      LICENSE_PLATE: ${{ secrets.MY_LICENSE_PLATE }} 
+      LICENSE_PLATE: ${{ secrets.LICENSEPLATE }} 
       BASEURL:   ${{ secrets.BASEURL }} 
       
 on:

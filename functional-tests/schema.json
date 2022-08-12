@@ -1,0 +1,27 @@
+{
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "id",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "pid",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "ssp-greetings-saved-glowworm",
+        "KeySchema": [
+            {
+                "AttributeName": "pid",
+                "KeyType": "HASH"
+            },
+            {
+                "AttributeName": "id",
+                "KeyType": "RANGE"
+            }
+        ],
+        "ProvisionedThroughput": {
+            "ReadCapacityUnits": 1,
+            "WriteCapacityUnits": 1
+        }
+}

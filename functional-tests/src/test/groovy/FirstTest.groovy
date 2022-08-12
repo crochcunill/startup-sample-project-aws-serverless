@@ -7,7 +7,7 @@ import spock.lang.Unroll
 import spock.lang.Narrative
 import spock.lang.Title
 import org.junit.Test
-/
+
 
 @Narrative('''Basic functionality test''')
 
@@ -66,6 +66,6 @@ class FirstTest extends GebReportingSpec {
        "Konichiwa"       | "Bonjour"            | 4
        "Howdy"           | "Konichiwa"          | 5
 
-     }
-
+     
+  }
 }

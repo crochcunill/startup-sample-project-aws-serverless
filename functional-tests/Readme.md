@@ -81,6 +81,24 @@ The following secrets need to be set to mail the test results to the account of 
 - `MAIL_USERNAME`
 
 
+## Running the test repetitively
+The Previous Greeting Selection is not sorted and only displays ten greetings. The test probes five greeting and is able to sort by timestamp. However, if you have more than ten previous greetings, the latest greeting may not be on display.
+
+A workaround is
+List the dynamodb tables
+	% aws dynamodb list-tables
+
+The name of the table is something like `ssp-greetings-saved-glowworm` with the last two words changing at random. Find the name of this table and then delete the table
+
+  % aws dynamodb delete-table --table-name [value] 
+
+And rebuild it again with 
+  % aws dynamodb create-table --cli-input-json file://schema.json
+
+The schema.json file is already in this project, although you will need to tweak it to reflect the current name to the table.
+
+This process of deleting and rebuilding the table is the less expensive one and will clear the table so you can test again.
+
 ## Running using other browsers
 - **ChromeHeadless**: 
 
