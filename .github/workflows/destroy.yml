@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -33,14 +33,18 @@ jobs:
           organization = "${{ env.organization }}"
           workspaces { name = "${{ secrets.LICENCEPLATE }}-${{ env.environment }}-backend" }
           EOF
+
+
           terraform init -backend-config=backend.hcl
           terraform destroy -auto-approve
-      - name: destroying front-end and deploying Frontend using terraform
+
+      - name: destroying front-end
         run: |
           cd client
           cat <<EOF > backend.hcl
           organization = "${{ env.organization }}"
           workspaces { name = "${{ secrets.LICENCEPLATE }}-${{ env.environment }}-frontend" }
           EOF
+
           terraform init -backend-config=backend.hcl
           terraform destroy -auto-approve
