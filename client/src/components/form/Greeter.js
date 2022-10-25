@@ -40,7 +40,7 @@ console.log(values)
             disabled={isDisabled}
             options={[
               { value: 'Aloha', label: 'Aloha' },
-              { value: 'Bonjour', label: 'Carles diu Bondia  a f2u30s' },
+              { value: 'Bonjour', label: 'Serverless app for ubwyx8 - Oct 25, 2022' },
               { value: 'Bonjour', label: 'Bonjour' },
               { value: 'Greetings and salutations', label: 'Greetings and salutations' },
               { value: 'Hello', label: 'Hello' },
