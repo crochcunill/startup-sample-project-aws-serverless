@@ -40,7 +40,7 @@ console.log(values)
             disabled={isDisabled}
             options={[
               { value: 'Aloha', label: 'Aloha' },
-              { value: 'Bonjour', label: 'Serverless app for td5cou-dev - Upgrade to 1.5.5- Feb 21, 2023' },
+              { value: 'Bonjour', label: 'Serverless app Upgrade to 1.5.5' },
               { value: 'Bonjour', label: 'Bonjour' },
               { value: 'Greetings and salutations', label: 'Greetings and salutations' },
               { value: 'Hello', label: 'Hello' },
