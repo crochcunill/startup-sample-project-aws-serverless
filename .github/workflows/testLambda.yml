@@ -10,6 +10,7 @@ jobs:
     
     steps:
       - name: invokes function
+        id: foobar
         uses: gagoar/invoke-aws-lambda@master
     
         with:
