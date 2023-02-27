@@ -16,6 +16,7 @@ jobs:
         with:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
           REGION: ca-central-1
           FunctionName: getFullSnapshot
           Payload: '{ "myParameter": false }'
