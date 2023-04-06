@@ -40,7 +40,7 @@ console.log(values)
             disabled={isDisabled}
             options={[
               { value: 'Aloha', label: 'Aloha' },
-              { value: 'Bonjour', label: 'Serverless - szlw3p - Upgrade to 1.5.5 Feb 24, 2023' },
+              { value: 'Bonjour', label: 'Serverless -  m9tvhw-dev- Upgrade to 1.5.6a April 6, 2023' },
               { value: 'Bonjour', label: 'Bonjour' },
               { value: 'Greetings and salutations', label: 'Greetings and salutations' },
               { value: 'Hello', label: 'Hello' },
